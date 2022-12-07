@@ -1,0 +1,18 @@
+<!-- <p>departement works!</p>
+<div *ngFor="let DEP of listedep">
+    <p>{{DEP.NomDep}}</p>
+</div> -->
+<h1 class="text-center">Add Departement</h1>
+<div class="container text-center">
+    <div>
+        <input type="text" placeholder="nom" class="form-control" [(ngModel)]="nomDep" />
+
+    </div>
+
+    <button  class="btn btn-success" (click)="onSubmit()">save</button>
+</div>
+    
+
+
+
+

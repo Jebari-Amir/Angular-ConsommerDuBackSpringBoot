@@ -1,0 +1,55 @@
+<p>listedep works!</p>
+<div *ngFor="let DEP of listedep">
+    <p>{{DEP.NomDep}}</p>
+    <div class="btn">
+        <p>hello world this is buttons edit and delete. Clicker surle boutton ...</p>
+        <button class="btn btn-primary" (click)="open(content,DEP)">edit</button>&nbsp;
+        <button class="btn btn-danger" (click)="deletesubdep(DEP._id)">delete</button>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Sub_Categorypdate</h4>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="mb-3">
+          <label for="dateOfBirth">name</label>
+          <div class="input-group">
+            <input  class="form-control"  formControlName="name">
+            </div>
+        </div>
+
+
+        <div class="mb-3">
+          <label for="dateOfBirth">Description</label>
+          <div class="input-group">
+            <input  class="form-control"  formControlName="description">
+             </div>
+        </div>
+
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click'); Updatedep()">Save</button>
+    </div>
+  </ng-template>
+  
+  <!-- <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button> -->
+  
+  <hr>
+  
+  <pre>{{ closeResult }}</pre>
